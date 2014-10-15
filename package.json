@@ -1,0 +1,24 @@
+{
+  "name": "opcbk",
+  "version": "0.0.1",
+  "description": "Owl and Pussycat Site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Owl",
+    "and",
+    "Pussycat",
+    "Brooklyn"
+  ],
+  "author": "Adrian Green",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.10.0",
+    "express": "^3.17.2",
+    "http": "0.0.0",
+    "swig": "^1.4.2"
+  }
+}
