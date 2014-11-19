@@ -10,7 +10,10 @@ html(ng-app="myapp")
         link(rel='stylesheet',href="/owl-carousel/owl.theme.css")
         link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
         link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css')
-        link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Droid+Sans")
+        //link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Droid+Sans")
+        //link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Cookie")
+        link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Lobster+Two',type='text/css')
+        link(rel='stylesheet', href="/css/animate.css")
         script(src="js/jquery.min.js")
         script(src="js/lazyload.js")
         script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js",type="application/javascript")
@@ -29,37 +32,60 @@ html(ng-app="myapp")
             .bounce {
                 background-color:black;
             }
+            .wrapper .title:before{
+                background: url('images/shadow.png');
+                height:38px;
+                width:38px;
+                bottom:-24px;
+                left:-35px;
+                position:absolute;
+                content: '';
+            }
+            .wrapper .title:after{
+                background: url('images/shadow.png');
+                height:38px;
+                width:38px;
+                bottom:-24px;
+                right:-35px;
+                position:absolute;
+                content: '';
+                transform: scaleX(-1);
+            }
 
 body
-    .container-fluid(style='background-image:url("images/stripe2.png");min-height:100%;height:100%;box-sizing:border-box;')
-        div(style="margin-top:8em")
+    .container-fluid(style='background-image:url("images/stripe3.png");min-height:100%;height:100%;box-sizing:border-box;')
+        div(style="margin-top:2em")
             center
-                img(height="480",width="550",src="images/logo2.png")
+                img(height="580",width="690",src="images/logo2.png")
             center
                 i.fa.fa-chevron-down.front-page-down(style="font-size:2em;color:white")
-    .container-fluid(style="background-color:black")
-        div(style="background-color:black;padding:20px")
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:#333333") Meet Our Stylists
+    .container-fluid(style="background-color:#D86D68")
+        //div(style="background-color:#f3f3f3;padding:20px;height:8em")
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Our Stylists
-    .container-fluid#stylists
+    .container-fluid#stylists(style="padding-top:130px;background:#efe4e3")
         .row
             .col-xs-6.col-md-4#jane(style="padding:20px")
                 center
-                    div(id="jane",style='background-image:url("images/jane.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div#jane(style='background-image:url("images/jane.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Jane
                     em Partner | Lead Stylist
                     div(id="janebio",style="display:none;color:white")
                         strong Jane is co-owner of the salon and leads and mentors our Artistic Team here at OPC. She is also our resident color expert. Jane crafted her early career in Florida, where she became a Redken Master Stylist and color maven. Ten years later, she was ready for New York…and New York was ready for Jane. Jane lives in Greenpoint and is excited to bring her talents to Ft. Greene. “The neighborhood needs easy access to stellar hair services! I love the energy, diversity, and artistic expression found in the most unlikely of places in this city.” Jane’s approach is all about precision – delivered with warmth, sincerity and fun. Her instinctive reading of her clients needs, coupled with exemplary service standards has given our team pride and inspiration.
             .col-xs-6.col-md-4#jessica(style="padding:20px")
                 center
-                    div(style='background-image:url("images/jessica.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div#jessica(style='background-image:url("images/jessica.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Jessica
                     em Lead Stylist
                     div(id="jessbio",style="display:none;color:white")
                         strong Jessica has spent eighteen years growing her skills as a colorist, cutter, and updo artist. She has a background in education and platform work, working for industry innovators such as L’Oreal Professionnel. Jessica is driven by the belief that beauty, function, confidence, and self expression can be attainable for everyone. She utilizes her passion for art, fashion, and relationships to cultivate a professional one on one experience for each and every client. Her patience and good natured disposition provides an environment of trust, allowing clients to explore new ideas on their own terms. Classic or edgy, sophisticated or free spirited, Jessica will take you where you want to go!
             .col-xs-6.col-md-4#kim(style="padding:20px")
                 center
-                    div(style='background-image:url("images/kimba.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/kimba.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Kim
                     em Lead Stylist
                     div(id="kimbio",style="display:none;color:white")
@@ -67,7 +93,7 @@ body
                         
             .col-xs-6#christine(style="padding:20px")
                 center
-                    div(style='background-image:url("images/christine2.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/christine2.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Christine
                     em Senior Stylist
                     div(id="chrstinebio",style="display:none;color:white")
@@ -75,14 +101,14 @@ body
             
             .col-xs-6#mary(style="padding:20px")
                 center
-                    div(style='background-image:url("images/mary1.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/mary1.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Mary
                     em Senior Stylist
                     div(id="marybio",style="display:none;color:white")
                         strong Mary Crocker knew from a very young age she wanted to be a hairdresser, doing her first haircut at the age of 11 for her time crunched mother. She finds her inspiration in her surroundings: “What are people wearing on the streets from neighborhood to neighborhood? The city is a constantly evolving environment full of fresh inspiration”. For men, she’s inspired by GQ and Mad Men, crisp and clean. Mary has spent a great deal of time working with barbers to really develop her skills in this frequently neglected aspect of hairdressing. Specializing in “wake and shake” hair for her ladies, meaning natural, wearable hair. Its always a fun and first class experience in Mary’s office!
             .col-xs-6#jenni(style="padding:20px")
                 center
-                    div(style='background-image:url("images/jenni3.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/jenni3.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Jenni
                     em Stylist
                     div(id="jennibio",style="display:none;color:white")
@@ -90,80 +116,103 @@ body
                         
             .col-xs-6#cori(style="padding:20px")
                 center
-                    div(style='background-image:url("images/cori.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/cori.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Cori
                     em Stylist
                     div(id="coribio",style="display:none;color:white")
                         strong Cori Norton, our brand new super-stylist is another Floridian transplant happily received into Brooklyn! Cori’s love and passion for hair began nearly a decade ago in 2005, where she attended Redken’s Salon Professional Academy in Tampa, Florida. Over the years she has trained with some of the leading hair artists in the industry, and focussed on education through classes at Redken’s 5th Ave. headquarters. She has worked on commercial and photo shoots, including styling hair for the Tampa Bay Buccaneer Cheerleaders. Cori enjoys every aspect of doing hair but particularly loves to focus on curly hair, blondes and color corrections. Cori is a warm, friendly and talented addition to the team.
-                        
-    .container-fluid(style="background-color:black")
-        div(style="background-color:black;padding:20px")
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#DF716B;position:absolute;left:50%")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:#333333") Support Staff                 
+    .container-fluid(style="background-color:#DF716B")
+        //div(style="background-color:black;padding:20px")
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Our Staff
                 
-    .container-fluid
+    .container-fluid#staff(style="padding-top:120px;padding-bottom:50px;background-color:#DF716B")
         .row
-            .col-xs-6.col-md-4(style="padding:20px")
+            .col-xs-6(style="padding:20px")
                 center
-                    div(style='background-image:url("images/rachel1.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/rachel1.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Rachael
-            .col-xs-6.col-md-4(style="padding:20px")
+            .col-xs-6(style="padding:20px")
                 center
-                    div(style='background-image:url("images/cameron.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
-                    h3 Cameron
-            .col-xs-6.col-md-4(style="padding:20px")
-                center
-                    div(style='background-image:url("images/christineA.png");background-size:cover;height:17.5em;width:17.5em;border-radius:70px')
+                    div(style='background-image:url("images/christineA.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Christine
                     
-    .container-fluid(style="background-color:black")
-        div(style="background-color:black;padding:20px")
-            center(style="color:white;font-family:Droid Sans,sans-serif")
-                h2 Our Menu
-    .container
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:#333333") Menu
+    .container-fluid(style="padding-bottom:50px;background:#efe4e3")
+        div(style="margin-top:50px")
+            center
+                em(style="font-size:1.5em") Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/updos, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
         .row
-            .col-xs-6(style="padding-left:150px")
-                h3(style="color:#df4434") CUT
+            .col-xs-6(style="padding-left:150px;font-family:'Lobster Two', cursive")
+                //h3(style="color:#df4434") CUT
                 hr
-                em Barber Cuts 45/48/52
+                span(style="font-size:2.2em") Barber Cuts 45/48/52
                 br
-                em Haircuts 75/78/92
+                span(style="font-size:2.2em") Haircuts 75/78/92
                 br
-                em Bang Trim 15
+                span(style="font-size:2.2em") Bang Trim 15
                 br
-                em Cleanup 27 Blowout 48/60
+                span(style="font-size:2.2em") Blowout 48/60
+                br
+                //span(style="font-size:2.2em")(style="color:#df4434") TREATMENT
+                br
+                br
+                span(style="font-size:2.2em") Additional Color 30
+                br
+                span(style="font-size:2.2em") Deep Conditioning 15
+                br
+                span(style="font-size:2.2em") Iron Work 20+
+            .col-xs-6(style="padding-left:150px;font-family:'Lobster Two', cursive")
+                //h3(style="color:#df4434") Color
                 hr
-                h3(style="color:#df4434") TREATMENT
-                hr
-                em Additional Color 30
+                span(style="font-size:2.2em") Full Highlights 175+
                 br
-                em Deep Conditioning 15
+                span(style="font-size:2.2em") Single Process 78+
                 br
-                em Iron Work 20+
-            .col-xs-6(style="padding-left:150px")
-                h3(style="color:#df4434") Color
-                hr
-                em Full Highlights 175+
+                span(style="font-size:2.2em") Quarter Highlights 90+
                 br
-                em Single Process 78+
+                span(style="font-size:2.2em") Partial Highlights 130+     
                 br
-                em Quarter Highlights 90+
+                span(style="font-size:2.2em") Double Process 175+
                 br
-                em Partial Highlights 130+     
+                span(style="font-size:2.2em") Toner/Glaze 40
                 br
-                em Double Process 175+
-                br
-                em Toner/Glaze 40
-                br
-                em Shades EQ Gloss 55
-                hr
-                em Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/updos, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
-        center
+                span(style="font-size:2.2em") Shades EQ Gloss 55
+                //hr
+        //center
             hr
             h2 Our Policy
             hr
             h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
-    .container-fluid(style="background-color:black")
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#9de0df;position:absolute;left:50%")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:#333333") Policy
+    .container-fluid(style="background:#9de0df")
+        .row
+            .col-md-6(style="margin-top:100px;margin-left:24em")
+                ul
+                    li 
+                        h4 Please be advised that require a credit card to hold all appointments.
+                    li
+                        h4 We kindly ask that any changes or cancellations be made with 24hours notice. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice.
+                    li
+                        h4 No shows will only be rebooked at the management’s discretion.
+                    li
+                        h4 Please contact OPC Salon within 72 hours to report the need for a service correction.
+                    li
+                        h4 Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
+                //center
+                    
+                    h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
+    //.container-fluid(style="background-color:black")
         div(style="background-color:black;padding:20px")
             center(style="color:black;font-family:Droid Sans,sans-serif")
                 h2 Holla
