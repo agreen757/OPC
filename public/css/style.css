@@ -1,0 +1,57 @@
+#mural {
+    background:
+        -webkit-radial-gradient(white 15%, transparent 16%),
+        -webkit-radial-gradient(white 15%, transparent 16%),
+        black;
+    border: 50px solid #223a3f;
+    height:120%;
+    background-color:#223a3f;
+    background-position: 0 0, 80px 80px;
+    
+    -webkit-background-size:160px 160px;
+    -moz-background-size:160px 160px;
+    background-size:10px 10px;
+}
+
+.scissors {
+    margin-left: 10.3em;
+    margin-right: auto;
+    position: absolute;
+    margin-top: 20px;
+}
+
+#stylists {
+    color:#DF716B;
+}
+
+#group {
+    background:url("../images/opcsalon_cmyk.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100%;
+    /*border:50px solid #efe4e3;*/
+}
+
+.wrapper .title {
+    font-family: 'Poiret One';
+}
+
+.wrapper .title:before{
+                background: url('images/shadow.png');
+                height:38px;
+                width:38px;
+                bottom:-24px;
+                left:-35px;
+                position:absolute;
+                content: '';
+            }
+.wrapper .title:after{
+    background: url('images/shadow.png');
+    height:38px;
+    width:38px;
+    bottom:-24px;
+    right:-35px;
+    position:absolute;
+    content: '';
+    transform: scaleX(-1);
+}

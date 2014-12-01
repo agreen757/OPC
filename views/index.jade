@@ -13,6 +13,7 @@ html(ng-app="myapp")
         //link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Droid+Sans")
         //link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Cookie")
         link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Lobster+Two',type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Poiret+One',rel='stylesheet',type='text/css')
         link(rel='stylesheet', href="/css/animate.css")
         script(src="js/jquery.min.js")
         script(src="js/lazyload.js")
@@ -32,25 +33,6 @@ html(ng-app="myapp")
             .bounce {
                 background-color:black;
             }
-            .wrapper .title:before{
-                background: url('images/shadow.png');
-                height:38px;
-                width:38px;
-                bottom:-24px;
-                left:-35px;
-                position:absolute;
-                content: '';
-            }
-            .wrapper .title:after{
-                background: url('images/shadow.png');
-                height:38px;
-                width:38px;
-                bottom:-24px;
-                right:-35px;
-                position:absolute;
-                content: '';
-                transform: scaleX(-1);
-            }
 
 body
     .container-fluid(style='background-image:url("images/stripe3.png");min-height:100%;height:100%;box-sizing:border-box;')
@@ -61,6 +43,7 @@ body
                 i.fa.fa-chevron-down.front-page-down(style="font-size:2em;color:white")
     .wrapper(style="position:relative;")
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
+            img.scissors(src="images/normal.png")
             center
                 p(style="font-size:1.5em;font-weight:600;color:#333333") Meet Our Stylists
     .container-fluid(style="background-color:#D86D68")
@@ -71,44 +54,45 @@ body
         .row
             .col-xs-6.col-md-4#jane(style="padding:20px")
                 center
-                    div#jane(style='background-image:url("images/jane.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div#jane(style='background-image:url("images/jane.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jane
                     em Partner | Lead Stylist
                     div(id="janebio",style="display:none;color:white")
                         strong Jane is co-owner of the salon and leads and mentors our Artistic Team here at OPC. She is also our resident color expert. Jane crafted her early career in Florida, where she became a Redken Master Stylist and color maven. Ten years later, she was ready for New York…and New York was ready for Jane. Jane lives in Greenpoint and is excited to bring her talents to Ft. Greene. “The neighborhood needs easy access to stellar hair services! I love the energy, diversity, and artistic expression found in the most unlikely of places in this city.” Jane’s approach is all about precision – delivered with warmth, sincerity and fun. Her instinctive reading of her clients needs, coupled with exemplary service standards has given our team pride and inspiration.
             .col-xs-6.col-md-4#jessica(style="padding:20px")
                 center
-                    div#jessica(style='background-image:url("images/jessica.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div#jessica(style='background-image:url("images/jessica.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jessica
                     em Lead Stylist
                     div(id="jessbio",style="display:none;color:white")
                         strong Jessica has spent eighteen years growing her skills as a colorist, cutter, and updo artist. She has a background in education and platform work, working for industry innovators such as L’Oreal Professionnel. Jessica is driven by the belief that beauty, function, confidence, and self expression can be attainable for everyone. She utilizes her passion for art, fashion, and relationships to cultivate a professional one on one experience for each and every client. Her patience and good natured disposition provides an environment of trust, allowing clients to explore new ideas on their own terms. Classic or edgy, sophisticated or free spirited, Jessica will take you where you want to go!
             .col-xs-6.col-md-4#kim(style="padding:20px")
                 center
-                    div(style='background-image:url("images/kimba.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div(style='background-image:url("images/kimba.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Kim
                     em Lead Stylist
                     div(id="kimbio",style="display:none;color:white")
                         strong Kim brings “Beachy Boho” from Florida to Brooklyn. A hairstylist for 12 years, Kim was trained by Redken’s top educators through to becoming becoming a Redken Master Stylist. She trained at the Redken Exchange on Fifth Ave in New York and in Tampa, she worked behind the scenes with the Tampa Bay Buccaneers Cheerleaders, doing hair for game days, photo shoots and their swimsuit calendars. As part of Kim’s freelance work she is a hair and makeup artist for the Saks fifth Ave corporate offices, and works on sets for various commercials and photo shoots. “Im inspired by the diversity and energy that New York has to offer. I plan on making people beautiful one head at a time!”
                         
+            .col-xs-6#mary(style="padding:20px")
+                center
+                    div(style='background-image:url("images/mary1.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
+                    h3 Mary
+                    em Lead Stylist
+                    div(id="marybio",style="display:none;color:white")
+                        strong Mary Crocker knew from a very young age she wanted to be a hairdresser, doing her first haircut at the age of 11 for her time crunched mother. She finds her inspiration in her surroundings: “What are people wearing on the streets from neighborhood to neighborhood? The city is a constantly evolving environment full of fresh inspiration”. For men, she’s inspired by GQ and Mad Men, crisp and clean. Mary has spent a great deal of time working with barbers to really develop her skills in this frequently neglected aspect of hairdressing. Specializing in “wake and shake” hair for her ladies, meaning natural, wearable hair. Its always a fun and first class experience in Mary’s office!
+                        
             .col-xs-6#christine(style="padding:20px")
                 center
-                    div(style='background-image:url("images/christine2.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div(style='background-image:url("images/christine2.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Christine
                     em Senior Stylist
                     div(id="chrstinebio",style="display:none;color:white")
                         strong Christine is a warm ray of sunshine hailing from the west coast with almost two decades experience behind the chair. She’s incredible at creating natural, wearable, breathtaking color by incorporating techniques unique to our salon. Her cuts use soft edges on crisp lines and are customized to each clients individual needs. What brings people back into Christine’s chair is her genuine warmth, which works in congruence with her skill.
             
-            .col-xs-6#mary(style="padding:20px")
-                center
-                    div(style='background-image:url("images/mary1.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
-                    h3 Mary
-                    em Senior Stylist
-                    div(id="marybio",style="display:none;color:white")
-                        strong Mary Crocker knew from a very young age she wanted to be a hairdresser, doing her first haircut at the age of 11 for her time crunched mother. She finds her inspiration in her surroundings: “What are people wearing on the streets from neighborhood to neighborhood? The city is a constantly evolving environment full of fresh inspiration”. For men, she’s inspired by GQ and Mad Men, crisp and clean. Mary has spent a great deal of time working with barbers to really develop her skills in this frequently neglected aspect of hairdressing. Specializing in “wake and shake” hair for her ladies, meaning natural, wearable hair. Its always a fun and first class experience in Mary’s office!
             .col-xs-6#jenni(style="padding:20px")
                 center
-                    div(style='background-image:url("images/jenni3.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div(style='background-image:url("images/jenni3.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jenni
                     em Stylist
                     div(id="jennibio",style="display:none;color:white")
@@ -116,13 +100,14 @@ body
                         
             .col-xs-6#cori(style="padding:20px")
                 center
-                    div(style='background-image:url("images/cori.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
+                    div(style='background-image:url("images/cori.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Cori
                     em Stylist
                     div(id="coribio",style="display:none;color:white")
                         strong Cori Norton, our brand new super-stylist is another Floridian transplant happily received into Brooklyn! Cori’s love and passion for hair began nearly a decade ago in 2005, where she attended Redken’s Salon Professional Academy in Tampa, Florida. Over the years she has trained with some of the leading hair artists in the industry, and focussed on education through classes at Redken’s 5th Ave. headquarters. She has worked on commercial and photo shoots, including styling hair for the Tampa Bay Buccaneer Cheerleaders. Cori enjoys every aspect of doing hair but particularly loves to focus on curly hair, blondes and color corrections. Cori is a warm, friendly and talented addition to the team.
     .wrapper(style="position:relative;")
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#DF716B;position:absolute;left:50%")
+            img.scissors(src="images/normal.png")
             center
                 p(style="font-size:1.5em;font-weight:600;color:#333333") Support Staff                 
     .container-fluid(style="background-color:#DF716B")
@@ -142,13 +127,15 @@ body
                     h3 Christine
                     
     .wrapper(style="position:relative;")
-        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%;background-image: url(http://www.transparenttextures.com/patterns/black-linen.png)")
+            img.scissors(src="images/normal.png")
             center
                 p(style="font-size:1.5em;font-weight:600;color:#333333") Menu
-    .container-fluid(style="padding-bottom:50px;background:#efe4e3")
-        div(style="margin-top:50px")
-            center
-                em(style="font-size:1.5em") Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/updos, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
+    .container-fluid(style="padding-bottom:50px;background:#efe4e3;background-image: url(http://www.transparenttextures.com/patterns/black-linen.png)")
+        .row
+            center    
+                div(style="margin-top:50px;width:50%")
+                    p(style="font-size:1.5em;font-weight:600") Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/updos, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
         .row
             .col-xs-6(style="padding-left:150px;font-family:'Lobster Two', cursive")
                 //h3(style="color:#df4434") CUT
@@ -193,22 +180,25 @@ body
             h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
     .wrapper(style="position:relative;")
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#9de0df;position:absolute;left:50%")
+            img.scissors(src="images/normal.png")
             center
                 p(style="font-size:1.5em;font-weight:600;color:#333333") Policy
-    .container-fluid(style="background:#9de0df")
+    .container-fluid(style="background:#9de0df;padding:150px")
         .row
-            .col-md-6(style="margin-top:100px;margin-left:24em")
-                ul
+            .col-md-6(style="margin-top:80px;")
+                 ul
                     li 
-                        h4 Please be advised that require a credit card to hold all appointments.
+                        p(style="font-size:2em") Please be advised that OPC Salon requires a credit card to hold all appointments.
                     li
-                        h4 We kindly ask that any changes or cancellations be made with 24hours notice. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice.
+                        p(style="font-size:2em")  We kindly ask that any changes or cancellations be made with 24hours notice. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice.
                     li
-                        h4 No shows will only be rebooked at the management’s discretion.
+                        p(style="font-size:2em")  No shows will only be rebooked at the management’s discretion.
+            .col-md-6(style="margin-top:100px;")
+                ul
                     li
-                        h4 Please contact OPC Salon within 72 hours to report the need for a service correction.
+                        p(style="font-size:2em")  Please contact OPC Salon within 72 hours to report the need for a service correction.
                     li
-                        h4 Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
+                        p(style="font-size:2em")  Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
                 //center
                     
                     h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
@@ -216,24 +206,44 @@ body
         div(style="background-color:black;padding:20px")
             center(style="color:black;font-family:Droid Sans,sans-serif")
                 h2 Holla
-    .container-fluid(style='background:url("images/opcsalon_cmyk.png") 50% 0 fixed;height:auto;margin:0 auto;position:relative;box-shadow: 0 0 50px rgba(0,0,0,0.8);padding: 200px 0;background-repeat:no-repeat;background-size:cover;')
-    .container-fluid(style="background-color:black")
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#223a3f;position:absolute;left:50%")
+            img.scissors(src="images/normal.png")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:#eee") Products
+    .container-fluid#mural
+        .row
+            .col-md-6
+                center
+                    img.img-circle(src="images/product.jpg",height="600",width="550",style="margin-top:15px")
+            .col-md-4(style="margin-top:50px")
+                center
+                    img(src="images/pureologysample.jpg",height="200",width="250")
+            .col-md-4(style="margin-top:50px")
+                center
+                    img(height="200",width="200",src="images/redken2012.png")
+    //section#mural(data-type="background",data-speed="7",style="min-height:100%;height:50%;box-sizing:border-box;")
+    //.wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:black") Stop by
+    .container-fluid#group
+        .col-md-6(style="margin-left:25em")
+            center
+                em(style="font-size:7em;color:white") SOME WELCOME TEXT
+    //.container-fluid(style="background-color:black")
         div(style="background-color:black;padding:20px")
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Say Hi :)
-    .container-fluid(style="background-color:#937dc7")
-        center
-            a(href="https://twitter.com/OPCSalonBK")
-                img(height="100",width="100",src="images/twitter-icon2.png")
-            a(href="https://www.facebook.com/opcsalon")
-                img(height="100",width="100",src="images/facebook-icon2.png")
-            a(href="http://instagram.com/owlandpussycatsalon")
-                img(height="100",width="100",src="images/instagram2.png")
-            hr
-            hr
-    .container-fluid(style="background-color:#937dc7")
+    .wrapper(style="position:relative;")
+        .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#d86d68;position:absolute;left:50%")
+            img.scissors(src="images/normal.png")
+            center
+                p(style="font-size:1.5em;font-weight:600;color:black") Contact Us
+    .container-fluid(style="background-color:#d86d68;background-image: url(http://www.transparenttextures.com/patterns/argyle.png)")
         .row
-            .col-xs-6(style="padding:80px")
+            center
+            .col-xs-6(style="padding:100px;margin-left:25em;border: solid #eee 5px;margin-top:5em;margin-bottom:3em;background-color:#d86d68")
                 form(role="form")
                     .form-group
                         label(for="inputName") Your Name
@@ -245,7 +255,19 @@ body
                         label(for="inputMessage") Your Message
                         textarea#inputMessage.form-control(type="textarea")
                     button.btn.btn-default(type="submit") Send It
-            .col-xs-6(style="padding:80px;left:400px")
+    .container-fluid#footer(style="background-color:#eee")
+        div(style="display:inline;border-right:solid black 1px")
+            a(href="https://twitter.com/OPCSalonBK")
+                img(height="50",width="50",src="images/twitter-icon2.png")
+        div(style="display:inline;border-right:solid black 1px")
+            a(href="https://www.facebook.com/opcsalon")
+                img(height="50",width="50",src="images/facebook-icon2.png")
+        div(style="display:inline;")
+            a(href="http://instagram.com/owlandpussycatsalon")
+                img(height="70",width="70",src="images/instagram2.png")
+        div(style="display:inline")
+            strong Stay in touch
+            //.col-xs-6(style="padding:80px;left:400px")
                 a(href="http://www.redkent.com")
                     img(height="100",width="100",src="images/redken2012.png")
                     
@@ -356,5 +378,7 @@ script.
               }); // end window scroll
            });  // end section function
         }); // close out script
+        
+        
     
         
