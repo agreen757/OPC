@@ -13,6 +13,7 @@ html(ng-app="myapp")
         //link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Droid+Sans")
         //link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Cookie")
         link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Lobster+Two',type='text/css')
+        link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Philosopher|Rock+Salt',type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Poiret+One',rel='stylesheet',type='text/css')
         link(rel='stylesheet', href="/css/animate.css")
         script(src="js/jquery.min.js")
@@ -23,6 +24,7 @@ html(ng-app="myapp")
         script(src="app/directives.js")
         script(src="js/jquery.dropotron.min.js")
         script(src="/owl-carousel/owl.carousel.js")
+        script(src="js/jquery.nav.js")
         style.
             html, body{
                 height:100%;
@@ -36,12 +38,25 @@ html(ng-app="myapp")
 
 body
     .container-fluid(style='background-image:url("images/stripe3.png");min-height:100%;height:100%;box-sizing:border-box;')
+        nav.navbar.navbar-default.navbar-fixed-top(role="navigation",style="background-image: url(http://www.transparenttextures.com/patterns/billie-holiday.png);")#top-nav
+            .container-fluid
+                .navbar-header
+                .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href="#stylists") Stylists
+                        li
+                            a(href="#menu") Menu
+                        li
+                            a(href="#policy") Policy
+                        li
+                            a(href="#contact") Contact Us
         div(style="margin-top:2em")
             center
                 img(height="580",width="690",src="images/logo2.png")
             center
                 i.fa.fa-chevron-down.front-page-down(style="font-size:2em;color:white")
-    .wrapper(style="position:relative;")
+    .wrapper(style="position:relative;")#stylists
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
             img.scissors(src="images/normal.png")
             center
@@ -50,7 +65,7 @@ body
         //div(style="background-color:#f3f3f3;padding:20px;height:8em")
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Our Stylists
-    .container-fluid#stylists(style="padding-top:130px;background:#efe4e3")
+    .container-fluid#stylists(style="font-family: 'Philosopher', sans-serif;padding-top:130px;background:#efe4e3")
         .row
             .col-xs-6.col-md-4#jane(style="padding:20px")
                 center
@@ -115,7 +130,7 @@ body
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Our Staff
                 
-    .container-fluid#staff(style="padding-top:120px;padding-bottom:50px;background-color:#DF716B")
+    .container-fluid#staff(style="font-family: 'Philosopher', sans-serif;padding-top:120px;padding-bottom:50px;background-color:#DF716B")
         .row
             .col-xs-6(style="padding:20px")
                 center
@@ -126,7 +141,7 @@ body
                     div(style='background-image:url("images/christineA.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 5px')
                     h3 Christine
                     
-    .wrapper(style="position:relative;")
+    .wrapper(style="position:relative;")#menu
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%;background-image: url(http://www.transparenttextures.com/patterns/black-linen.png)")
             img.scissors(src="images/normal.png")
             center
@@ -135,14 +150,14 @@ body
         .row
             center    
                 div(style="margin-top:50px;width:50%")
-                    p(style="font-size:1.5em;font-weight:600") Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/updos, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
+                    p(style="font-family: 'Philosopher', sans-serif;font-size:1.5em;font-weight:600") Our menu provides a base price for services. We encourage our clients to book a complimentary consultation for any new and exciting chemical services, wedding hair/special occasion styling, and make-up appointments to get an accurate quote from their personal stylist. Please keep in mind prices can vary considerably based on many factors including existing condition of the hair, amount of product/time required, and desired results. It is our goal to provide the highest quality service while maintaining the integrity of the hair and keeping an open line of communication with all of our clientele.
         .row
             .col-xs-6(style="padding-left:150px;font-family:'Lobster Two', cursive")
                 //h3(style="color:#df4434") CUT
                 hr
                 span(style="font-size:2.2em") Barber Cuts 45/48/52
                 br
-                span(style="font-size:2.2em") Haircuts 75/78/92
+                span(style="font-size:2.2em") Haircuts 75/85/92
                 br
                 span(style="font-size:2.2em") Bang Trim 15
                 br
@@ -151,54 +166,61 @@ body
                 //span(style="font-size:2.2em")(style="color:#df4434") TREATMENT
                 br
                 br
-                span(style="font-size:2.2em") Additional Color 30
-                br
                 span(style="font-size:2.2em") Deep Conditioning 15
                 br
-                span(style="font-size:2.2em") Iron Work 20+
+                span(style="font-size:2.2em") Flat Iron / Curling Iron 20+
             .col-xs-6(style="padding-left:150px;font-family:'Lobster Two', cursive")
                 //h3(style="color:#df4434") Color
                 hr
-                span(style="font-size:2.2em") Full Highlights 175+
-                br
                 span(style="font-size:2.2em") Single Process 78+
+                br
+                span(style="font-size:2.2em") Double Process 175+
                 br
                 span(style="font-size:2.2em") Quarter Highlights 90+
                 br
-                span(style="font-size:2.2em") Partial Highlights 130+     
+                span(style="font-size:2.2em") Half Highlights 130+     
                 br
-                span(style="font-size:2.2em") Double Process 175+
+                span(style="font-size:2.2em") Full Highlights 175+
                 br
                 span(style="font-size:2.2em") Toner/Glaze 40
                 br
                 span(style="font-size:2.2em") Shades EQ Gloss 55
+                br
+                span(style="font-size:2.2em") Additional Color 30
+                br
                 //hr
         //center
             hr
             h2 Our Policy
             hr
             h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
-    .wrapper(style="position:relative;")
+    .wrapper(style="position:relative;")#policy
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#9de0df;position:absolute;left:50%")
             img.scissors(src="images/normal.png")
             center
                 p(style="font-size:1.5em;font-weight:600;color:#333333") Policy
     .container-fluid(style="background:#9de0df;padding:150px")
         .row
-            .col-md-6(style="margin-top:80px;")
+            .col-md-6(style="margin-top:80px;font-family: 'Philosopher', sans-serif;font-size:1.2em")
                  ul
                     li 
-                        p(style="font-size:2em") Please be advised that OPC Salon requires a credit card to hold all appointments.
+                        p Please be advised that OPC Salon requires a credit card to hold all appointments.
                     li
-                        p(style="font-size:2em")  We kindly ask that any changes or cancellations be made with 24hours notice. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice.
+                        p  We kindly ask that any changes or cancellations be made with 24 hours notice. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice.
                     li
-                        p(style="font-size:2em")  No shows will only be rebooked at the management’s discretion.
-            .col-md-6(style="margin-top:100px;")
-                ul
+                        p  No shows will only be rebooked at the management’s discretion.
                     li
-                        p(style="font-size:2em")  Please contact OPC Salon within 72 hours to report the need for a service correction.
+                        p  Please contact OPC Salon within 72 hours to report the need for a service correction.
                     li
-                        p(style="font-size:2em")  Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
+                        p  Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
+            .col-md-6(style="padding-left:100px;")
+                img(src="images/stuart.png", height="400", width="350",style="border-radius:50%")
+                hr
+                center
+                    div(style="font-family: 'Philosopher', sans-serif;display:inline-block;padding:20px;height:20px;border-right:solid black 1px")
+                        p Stuart Fraser
+                    div(style="display:inline-block;padding:20px;height:20px")
+                        p Founder / Owner OPC Salon
                 //center
                     
                     h4 Please be advised that require a credit card to hold all appointments. We kindly ask that any changes or cancellations be made with <em style="color:red">24hours notice</em>. In the event of a no show or cancellation on short notice we reserve the right to charge up to 50% of the scheduled sevice. No shows will only be rebooked at the management’s discretion. Please contact OPC Salon within <span style="color:red">72 hours</span> to report the need for a service correction. Customer satisfaction is our number one priority. Payments will be accepted by cash and all major credit/debit cards except for American Express. Gratuity is cash only. Please no personal checks. There is no ATM on the premises.
@@ -228,14 +250,14 @@ body
             center
                 p(style="font-size:1.5em;font-weight:600;color:black") Stop by
     .container-fluid#group
-        .col-md-6(style="margin-left:25em")
+        .row
             center
-                em(style="font-size:7em;color:white") SOME WELCOME TEXT
+                p(style="font-family: 'Rock Salt', cursive;font-size:3em;color:#df716b") OPC SALON BEAUTIFYING BROWNSTONE BROOKLYN AND BEYOND
     //.container-fluid(style="background-color:black")
         div(style="background-color:black;padding:20px")
             center(style="color:white;font-family:Droid Sans,sans-serif")
                 h2 Say Hi :)
-    .wrapper(style="position:relative;")
+    .wrapper(style="position:relative;")#contact
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#d86d68;position:absolute;left:50%")
             img.scissors(src="images/normal.png")
             center
@@ -243,8 +265,8 @@ body
     .container-fluid(style="background-color:#d86d68;background-image: url(http://www.transparenttextures.com/patterns/argyle.png)")
         .row
             center
-            .col-xs-6(style="padding:100px;margin-left:23em;border: solid #eee 5px;margin-top:5em;margin-bottom:3em;background-color:#d86d68")
-                form(role="form")
+            .col-xs-6(style="padding:100px;float:none;margin-right:auto;margin-left:auto;border: solid #eee 5px;margin-top:5em;margin-bottom:3em;background-color:#d86d68")
+                form(role="form",style="font-family: 'Philosopher', sans-serif;")
                     .form-group
                         label(for="inputName") Your Name
                         input#inputName.form-control(type="text")
@@ -255,7 +277,12 @@ body
                         label(for="inputMessage") Your Message
                         textarea#inputMessage.form-control(type="textarea")
                     button.btn.btn-default(type="submit") Send It
-    .container-fluid#footer(style="background-color:#eee")
+                div(style="float:right;font-family: 'Philosopher', sans-serif;")
+                    p The Owl and the Pussycat Salon
+                    p 154 Vanderbilt Avenue, Brooklyn, NY 11205
+                    p 718.522.5697
+               
+    .container-fluid#footer(style="background-color:#eee;font-family: 'Philosopher', sans-serif;")
         div(style="display:inline;border-right:solid black 1px")
             a(href="https://twitter.com/OPCSalonBK")
                 img(height="50",width="50",src="images/twitter-icon2.png")
@@ -265,8 +292,17 @@ body
         div(style="display:inline;")
             a(href="http://instagram.com/owlandpussycatsalon")
                 img(height="70",width="70",src="images/instagram2.png")
-        div(style="display:inline")
+        div(style="display:inline;padding:20px")
             strong Stay in touch
+        br
+        div(style="display:inline;border-right:solid black 1px;padding:10px")
+            strong Hours of Operation - Monday, Wednesday, Thursday 11AM - 9PM
+        div(style="display:inline;border-right:solid black 1px;padding:10px")
+            strong Tuesday, Friday 11AM - 7PM
+        div(style="display:inline;border-right:solid black 1px;padding:10px")
+            strong Saturday 10AM 7PM
+        div(style="display:inline;border-right:solid black 1px;padding:10px")
+            strong Sunday 11AM 6PM
             //.col-xs-6(style="padding:80px;left:400px")
                 a(href="http://www.redkent.com")
                     img(height="100",width="100",src="images/redken2012.png")
@@ -359,6 +395,13 @@ script.
     
     $(document).ready(function(){
            // cache the window object
+           
+          
+          $('#top-nav').onePageNav({
+                 currentClass: 'active',
+                 changeHash: true,
+                 scrollSpeed: 600
+          });
            $window = $(window);
 
            $('section[data-type="background"]').each(function(){
