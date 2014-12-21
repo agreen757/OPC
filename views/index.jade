@@ -18,6 +18,7 @@ html(ng-app="myapp")
         link(rel='stylesheet', href="/css/animate.css")
         script(src="js/jquery.min.js")
         script(src="js/lazyload.js")
+        //script(src="https://phreeze.googlecode.com/svn-history/r408/trunk/phreeze/classbuilder/code/phreeze.backbone/scripts/libs/jquery.scrollIntoView.min.js")
         script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js",type="application/javascript")
         script(src="app/app.js",type="application/javascript")
         script(src="app/controllers.js")
@@ -54,8 +55,9 @@ body
         div(style="margin-top:2em")
             center
                 img(height="580",width="690",src="images/logo2.png")
-            center
+            //center
                 i.fa.fa-chevron-down.front-page-down(style="font-size:2em;color:white")
+    .wrapper(style="position:relative")#anchor
     .wrapper(style="position:relative;")#stylists
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
             img.scissors(src="images/normal.png")
@@ -67,59 +69,65 @@ body
                 h2 Our Stylists
     .container-fluid#stylists(style="font-family: 'Philosopher', sans-serif;padding-top:130px;background:#efe4e3")
         .row
-            .col-xs-6.col-md-4#jane(style="padding:20px")
+            .col-xs-6.col-md-4.stylist#jane(style="padding:20px")
                 center
                     div#jane(style='background-image:url("images/jane.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jane
                     em Partner | Lead Stylist
-                    div(id="janebio",style="display:none;color:white")
+                    div(id="janebio",style="display:none")
                         strong Jane is co-owner of the salon and leads and mentors our Artistic Team here at OPC. She is also our resident color expert. Jane crafted her early career in Florida, where she became a Redken Master Stylist and color maven. Ten years later, she was ready for New York…and New York was ready for Jane. Jane lives in Greenpoint and is excited to bring her talents to Ft. Greene. “The neighborhood needs easy access to stellar hair services! I love the energy, diversity, and artistic expression found in the most unlikely of places in this city.” Jane’s approach is all about precision – delivered with warmth, sincerity and fun. Her instinctive reading of her clients needs, coupled with exemplary service standards has given our team pride and inspiration.
-            .col-xs-6.col-md-4#jessica(style="padding:20px")
+            .col-xs-6.col-md-4.stylist#jessica(style="padding:20px")
                 center
                     div#jessica(style='background-image:url("images/jessica.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jessica
                     em Lead Stylist
-                    div(id="jessbio",style="display:none;color:white")
+                    div(id="jessbio",style="display:none")
                         strong Jessica has spent eighteen years growing her skills as a colorist, cutter, and updo artist. She has a background in education and platform work, working for industry innovators such as L’Oreal Professionnel. Jessica is driven by the belief that beauty, function, confidence, and self expression can be attainable for everyone. She utilizes her passion for art, fashion, and relationships to cultivate a professional one on one experience for each and every client. Her patience and good natured disposition provides an environment of trust, allowing clients to explore new ideas on their own terms. Classic or edgy, sophisticated or free spirited, Jessica will take you where you want to go!
-            .col-xs-6.col-md-4#kim(style="padding:20px")
+            .col-xs-6.col-md-4.stylist#kim(style="padding:20px")
                 center
                     div(style='background-image:url("images/kimba.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Kim
                     em Lead Stylist
-                    div(id="kimbio",style="display:none;color:white")
+                    div(id="kimbio",style="display:none")
                         strong Kim brings “Beachy Boho” from Florida to Brooklyn. A hairstylist for 12 years, Kim was trained by Redken’s top educators through to becoming becoming a Redken Master Stylist. She trained at the Redken Exchange on Fifth Ave in New York and in Tampa, she worked behind the scenes with the Tampa Bay Buccaneers Cheerleaders, doing hair for game days, photo shoots and their swimsuit calendars. As part of Kim’s freelance work she is a hair and makeup artist for the Saks fifth Ave corporate offices, and works on sets for various commercials and photo shoots. “Im inspired by the diversity and energy that New York has to offer. I plan on making people beautiful one head at a time!”
                         
-            .col-xs-6#mary(style="padding:20px")
+            .col-xs-6.stylist#mary(style="padding:20px")
                 center
                     div(style='background-image:url("images/mary1.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Mary
                     em Lead Stylist
-                    div(id="marybio",style="display:none;color:white")
+                    div(id="marybio",style="display:none")
                         strong Mary Crocker knew from a very young age she wanted to be a hairdresser, doing her first haircut at the age of 11 for her time crunched mother. She finds her inspiration in her surroundings: “What are people wearing on the streets from neighborhood to neighborhood? The city is a constantly evolving environment full of fresh inspiration”. For men, she’s inspired by GQ and Mad Men, crisp and clean. Mary has spent a great deal of time working with barbers to really develop her skills in this frequently neglected aspect of hairdressing. Specializing in “wake and shake” hair for her ladies, meaning natural, wearable hair. Its always a fun and first class experience in Mary’s office!
                         
-            .col-xs-6#christine(style="padding:20px")
+            .col-xs-6.stylist#christine(style="padding:20px")
                 center
                     div(style='background-image:url("images/christine2.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Christine
                     em Senior Stylist
-                    div(id="chrstinebio",style="display:none;color:white")
+                    div(id="chrstinebio",style="display:none")
                         strong Christine is a warm ray of sunshine hailing from the west coast with almost two decades experience behind the chair. She’s incredible at creating natural, wearable, breathtaking color by incorporating techniques unique to our salon. Her cuts use soft edges on crisp lines and are customized to each clients individual needs. What brings people back into Christine’s chair is her genuine warmth, which works in congruence with her skill.
             
-            .col-xs-6#jenni(style="padding:20px")
+            .col-xs-6.stylist#jenni(style="padding:20px")
                 center
                     div(style='background-image:url("images/jenni3.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Jenni
                     em Stylist
-                    div(id="jennibio",style="display:none;color:white")
+                    //div(id="jennibio",style="display:none;color:white")
                         strong Jenni is a New York native with 8 years experience as a stylist and make up artist. She is a Certified Colorist for Redken, where she trained extensively at the Redken Exchange on Fifth Avenue. In conjunction with her salon work, Jenni has traveled the country training upcoming stylists on color theory and application. Wanting to expand her knowledge as an artist, Jenni earned her BFA in photography at the Fashion Institute of Technology. “Studying both art forms truly allowed me to look at the hair and individual with a unique perspective. As stylists, we create wearable art on every client in our chair!”
-                        
-            .col-xs-6#cori(style="padding:20px")
+            .col-xs-6#jennibio(style="padding:20px;display:none")   
+                center
+                    strong Jenni is a New York native with 8 years experience as a stylist and make up artist. She is a Certified Colorist for Redken, where she trained extensively at the Redken Exchange on Fifth Avenue. In conjunction with her salon work, Jenni has traveled the country training upcoming stylists on color theory and application. Wanting to expand her knowledge as an artist, Jenni earned her BFA in photography at the Fashion Institute of Technology. “Studying both art forms truly allowed me to look at the hair and individual with a unique perspective. As stylists, we create wearable art on every client in our chair!”
+            .col-xs-6#coribio(style="padding:20px;display:none")
+                center
+                    strong Cori Norton, our brand new super-stylist is another Floridian transplant happily received into Brooklyn! Cori’s love and passion for hair began nearly a decade ago in 2005, where she attended Redken’s Salon Professional Academy in Tampa, Florida. Over the years she has trained with some of the leading hair artists in the industry, and focussed on education through classes at Redken’s 5th Ave. headquarters. She has worked on commercial and photo shoots, including styling hair for the Tampa Bay Buccaneer Cheerleaders. Cori enjoys every aspect of doing hair but particularly loves to focus on curly hair, blondes and color corrections. Cori is a warm, friendly and talented addition to the team.
+            .col-xs-6.stylist#cori(style="padding:20px")
                 center
                     div(style='background-image:url("images/cori.png");background-size:cover;height:20.5em;width:20.5em;border:solid white 10px')
                     h3 Cori
                     em Stylist
-                    div(id="coribio",style="display:none;color:white")
+                    //div(id="coribio",style="display:none;color:white")
                         strong Cori Norton, our brand new super-stylist is another Floridian transplant happily received into Brooklyn! Cori’s love and passion for hair began nearly a decade ago in 2005, where she attended Redken’s Salon Professional Academy in Tampa, Florida. Over the years she has trained with some of the leading hair artists in the industry, and focussed on education through classes at Redken’s 5th Ave. headquarters. She has worked on commercial and photo shoots, including styling hair for the Tampa Bay Buccaneer Cheerleaders. Cori enjoys every aspect of doing hair but particularly loves to focus on curly hair, blondes and color corrections. Cori is a warm, friendly and talented addition to the team.
+    #second
     .wrapper(style="position:relative;")
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#DF716B;position:absolute;left:50%")
             img.scissors(src="images/normal.png")
@@ -240,10 +248,12 @@ body
                     img.img-circle(src="images/product.jpg",height="600",width="550",style="margin-top:15px")
             .col-md-4(style="margin-top:50px")
                 center
-                    img(src="images/pureologysample.jpg",height="200",width="250")
+                    a(href="http://www.pureology.com/",target="_self")
+                        img(src="images/pureologysample.jpg",height="200",width="250")
             .col-md-4(style="margin-top:50px")
                 center
-                    img(height="200",width="200",src="images/redken2012.png")
+                    a(href="http://www.redken.com",target="_self")
+                        img(height="200",width="200",src="images/redken2012.png")
     //section#mural(data-type="background",data-speed="7",style="min-height:100%;height:50%;box-sizing:border-box;")
     //.wrapper(style="position:relative;")
         .title(style="width:25em;height:4.25em;top:-3.25em;line-height:3.25em;margin-left:-12.5em;background:#efe4e3;position:absolute;left:50%")
@@ -308,20 +318,62 @@ body
                     img(height="100",width="100",src="images/redken2012.png")
                     
 script.
-    $('#jane').click(function(){
-        console.log('clicked')
-        $('#jessica').toggleClass("hider")
-        $('#jenni').toggleClass("hider")
-        $('#cori').toggleClass("hider")
-        $('#mary').toggleClass("hider")
-        $('#christine').toggleClass("hider")
-        $('#kim').toggleClass("hider")
-        $('#janebio').toggle();
-        $('#stylists').toggleClass("bounce");
-        $('#stylists').css("background-color:black");
+    $(".stylist").click(function(){
+        console.log(this.id)
+        
+        $('.stylist').toggleClass("animated rotateOut")
+        $(this).toggleClass("animated fadeOut").removeClass("hider")
+        
+        switch(this.id){
+            case "jane":
+                $("#janebio").toggle();
+                //$('#stylists > .row').append('<div class="" style="float:right"><h1>something over here</h1><div>')
+                break;
+            case "jessica":
+                $("#jessbio").toggle();
+                break;
+            case "kim":
+                $("#kimbio").toggle();
+                break;
+            case "mary":
+                $("#marybio").toggle();
+                break;
+            case "christine":
+                $("#chrstinebio").toggle();
+                break;
+            case "jenni":
+                $("#jennibio").toggle();
+                break;
+            case "cori":
+                $("#coribio").toggle();
+                break;
+        }
+    })
+    /*$('#jane').click(function(){
+        scroller();
+        //$('#jessica').toggleClass("hider")
+        if(!$("#jessica").is(":visible")){
+            console.log('execute')
+            $('#jessica').addClass('animated rotateIn').toggleClass("hider")
+        }
+        else{
+            $('#jessica').addClass('animated rotateOut').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',  
+                function(e) {
+                    $(this).removeClass('animated rotateOut').toggleClass("hider");
+                }
+            );
+            $('#jenni').toggleClass("hider")
+            $('#cori').toggleClass("hider")
+            $('#mary').toggleClass("hider")
+            $('#christine').toggleClass("hider")
+            $('#kim').toggleClass("hider")
+            $('#janebio').toggle();
+            $('#stylists').toggleClass("bounce");
+            $('#stylists').css("background-color:black");
+            }
     })
     $('#jessica').click(function(){
-        console.log('clicked')
+        scroller();
         $('#jane').toggleClass("hider")
         $('#jenni').toggleClass("hider")
         $('#cori').toggleClass("hider")
@@ -333,7 +385,7 @@ script.
         $('#stylists').css("background-color:black");
     })
     $('#kim').click(function(){
-        console.log('clicked')
+        scroller();
         $('#jane').toggleClass("hider")
         $('#jenni').toggleClass("hider")
         $('#cori').toggleClass("hider")
@@ -345,7 +397,11 @@ script.
         $('#stylists').css("background-color:black");
     })
     $('#christine').click(function(){
-        console.log('clicked')
+        $("html, body").animate({ scrollTop: $("#anchor").offset().top }, 500);
+        if(!$("#jane").is(":visible")){
+            console.log('something')
+            $("html, body").animate({ scrollTop: $('#second').offset().top - 200    }, 500);
+        }
         $('#jane').toggleClass("hider")
         $('#jenni').toggleClass("hider")
         $('#cori').toggleClass("hider")
@@ -357,7 +413,11 @@ script.
         $('#stylists').css("background-color:black");
     })
     $('#mary').click(function(){
-        console.log('clicked')
+        $("html, body").animate({ scrollTop: $("#anchor").offset().top }, 500);
+        if(!$("#jane").is(":visible")){
+            console.log('something')
+            $("html, body").animate({ scrollTop: $('#second').offset().top - 200    }, 500);
+        }
         $('#jane').toggleClass("hider")
         $('#jenni').toggleClass("hider")
         $('#cori').toggleClass("hider")
@@ -369,7 +429,7 @@ script.
         $('#stylists').css("background-color:black");
     })
     $('#jenni').click(function(){
-        console.log('clicked')
+        scroller();
         $('#jane').toggleClass("hider")
         $('#cori').toggleClass("hider")
         $('#mary').toggleClass("hider")
@@ -381,7 +441,11 @@ script.
         $('#stylists').css("background-color:black");
     })
     $('#cori').click(function(){
-        console.log('clicked')
+        $("html, body").animate({ scrollTop: $("#anchor").offset().top }, 500);
+        if(!$("#jane").is(":visible")){
+            console.log('something')
+            $("html, body").animate({ scrollTop: $('#contact').offset().top}, 500);
+        }
         $('#jane').toggleClass("hider")
         $('#jenni').toggleClass("hider")
         $('#mary').toggleClass("hider")
@@ -391,7 +455,11 @@ script.
         $('#coribio').toggle();
         $('#stylists').toggleClass("bounce");
         $('#stylists').css("background-color:black");
-    })
+    })*/
+    
+    function scroller(){
+         $("html, body").animate({ scrollTop: $("#anchor").offset().top }, 500);
+    }
     
     $(document).ready(function(){
            // cache the window object
