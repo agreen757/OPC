@@ -21,4 +21,4 @@ var server = require('http').createServer(app);
 
 
 server.listen(process.env.PORT);
-console.log("Express server started on 4000");
+console.log("Express server started");
