@@ -40,6 +40,13 @@ ul.nav.navbar-nav li {
     font-size: 1.5em;
 }
 
+.navbar-right li a {
+    background-image: url('./Dreamstale.png');
+}
+.navbar-right li a.twitter {
+    background-position:1817px 2395px;
+}
+
 #products {
     color:white;
 }
